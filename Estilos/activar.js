@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultado.style.color = "#00B7FF";
 
     try {
-      const response = await fetch("http://localhost:3000/api/empresas/activar", {
+      const response = await fetch("http://192.168.1.27:3000/api/empresas/activar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ codigo })
@@ -143,3 +143,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+

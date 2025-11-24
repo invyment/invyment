@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       try {
         // Enviar al backend REAL
-        const response = await fetch("http://localhost:3000/api/empresas/registrar", {
+        const response = await fetch("http://192.168.1.27:3000/api/empresas/registrar", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(data)
@@ -145,3 +145,4 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+

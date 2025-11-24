@@ -1,0 +1,236 @@
+:root{
+  --bg:#0A0F18;
+  --panel:#0F172A;
+  --primary:#0A2540;
+  --primary-light:#1D4E89;
+  --accent:#00B7FF;
+  --accent-light:#33CCFF;
+  --text:#EAF6FF;
+  --muted:#8FA7BF;
+  --border:#112032;
+}
+
+/* Fondo igual al registro */
+body{
+  margin:0;
+  height:100vh;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  color:var(--text);
+  font-family:"Poppins", sans-serif;
+}
+
+#bgWaves{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+}
+
+/* ========================= CARD PRINCIPAL ========================= */
+.card-activacion{
+  z-index:2;
+  background:var(--panel);
+  padding:30px 40px;
+  width:100%;
+  max-width:520px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:0 0 30px rgba(0,183,255,.18);
+  backdrop-filter:blur(12px);
+  text-align:center;
+  animation:fadeIn .45s ease both;
+}
+
+.card-activacion h2{
+  margin-bottom:6px;
+  font-size:24px;
+}
+.card-activacion p{
+  color:var(--muted);
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+/* Input */
+.input-con-icono{
+  width:100%;
+  background:#112032;
+  border:1px solid #1A2C45;
+  border-radius:10px;
+  padding:10px 12px;
+  display:flex;
+  align-items:center;
+  margin-bottom:15px;
+}
+.input-con-icono input{
+  width:100%;
+  background:transparent;
+  color:var(--text);
+  border:none;
+  font-size:15px;
+  outline:none;
+}
+
+/* Botón igual al registro */
+.card-activacion button{
+  width:100%;
+  padding:12px;
+  border:0;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  color:white;
+  background:linear-gradient(90deg, var(--primary), var(--accent));
+  box-shadow:0 6px 18px rgba(0,183,255,.23);
+  transition:.3s;
+}
+.card-activacion button:hover{
+  background:linear-gradient(90deg, var(--primary-light), var(--accent-light));
+  transform:translateY(-1px);
+}
+
+.mensaje a{
+  color:var(--accent);
+  text-decoration:none;
+}
+.mensaje a:hover{
+  color:var(--accent-light);
+}
+
+/* ============================ ANIMACIÓN ============================ */
+.animacion-exito{
+  display:none;
+  justify-content:center;
+  align-items:center;
+}
+
+.loader{
+  width:55px;
+  height:55px;
+  border:6px solid rgba(255,255,255,.15);
+  border-top-color:var(--accent);
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{ to{ transform:rotate(360deg);} }
+
+/* ============================ MENSAJE FINAL ============================ */
+.mensaje-final{
+  display:none;
+  background:var(--panel);
+  padding:28px 35px;
+  width:100%;
+  max-width:520px;
+  border-radius:18px;
+  border:1px solid var(--border);
+  box-shadow:0 0 30px rgba(0,183,255,.20);
+  text-align:center;
+  animation:fadeIn .45s ease;
+}
+
+.mensaje-final .check{
+  font-size:55px;
+  color:var(--accent);
+}
+
+/* ============================ PANTALLA BIENVENIDA ============================ */
+.pantalla-bienvenida{
+  display:none;
+  position:absolute;
+  inset:0;
+  background:var(--bg);
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  animation:fadeIn .45s ease both;
+}
+
+.btn-empezar{
+  margin-top:18px;
+  padding:10px 36px;
+  border:0;
+  border-radius:10px;
+  font-size:15px;
+  font-weight:600;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  color:white;
+  cursor:pointer;
+  transition:.3s;
+}
+.btn-empezar:hover{
+  background:linear-gradient(90deg,var(--primary-light),var(--accent-light));
+}
+
+/* ============================ BOTÓN AYUDA ============================ */
+.help-button{
+  position:fixed;
+  right:25px;
+  bottom:25px;
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  border:0;
+  cursor:pointer;
+  font-weight:700;
+  font-size:20px;
+  background:var(--accent);
+  color:white;
+  box-shadow:0 0 20px rgba(0,183,255,.45);
+  transition:.3s;
+  z-index:20;
+}
+.help-button:hover{
+  transform:translateY(-3px);
+  background:var(--accent-light);
+}
+
+/* Modal */
+.help-modal{
+  position:fixed;
+  inset:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  background:rgba(0,0,0,.45);
+  backdrop-filter:blur(8px);
+  z-index:50;
+}
+.help-content{
+  background:#112032;
+  padding:25px;
+  width:min(380px,90%);
+  border-radius:14px;
+  border:1px solid var(--accent);
+  box-shadow:0 0 25px rgba(0,183,255,.35);
+}
+.cerrar-ayuda{
+  margin-top:12px;
+  padding:10px;
+  border:0;
+  border-radius:8px;
+  font-weight:700;
+  color:white;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+}
+
+/* Animación */
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(20px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.footer {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin-top: 25px;
+}
+
+

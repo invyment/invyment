@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro de Empresa – INVYMENT</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Estilos/registro.css"/>
+</head>
+
+<body>
+
+  <!-- Fondo animado -->
+  <canvas id="bgWaves"></canvas>
+
+  <main class="registro-wrapper">
+
+    <section class="registro-card">
+
+      <!-- Logo -->
+      <div class="logo-upload">
+        <label for="logoInput" class="upload-circle">
+          <img id="previewLogo" src="https://via.placeholder.com/100?text=+" />
+        </label>
+        <input type="file" id="logoInput" accept="image/*"/>
+        <p class="upload-note">Logo de empresa</p>
+      </div>
+
+      <h1>Registrar Empresa</h1>
+      <p class="subtext">Complete los datos para dar de alta su organización</p>
+
+      <form id="formEmpresa">
+
+        <div class="form-group">
+          <input id="inpNombre" type="text" placeholder="Nombre de la empresa" required />
+        </div>
+
+        <div class="form-group half">
+          <input id="inpRfc" type="text" placeholder="RFC" />
+        </div>
+
+        <div class="form-group half">
+          <input id="inpRep" type="text" placeholder="Representante legal" />
+        </div>
+
+        <div class="form-group half">
+          <input id="inpTel" type="tel" placeholder="Teléfono" />
+        </div>
+
+        <div class="form-group">
+          <input id="inpCorreo" type="email" placeholder="Correo electrónico" required />
+        </div>
+
+        <div class="form-group">
+          <textarea id="inpDir" placeholder="Dirección completa" rows="3"></textarea>
+        </div>
+
+        <button type="submit"class="btn-primary">
+          Registrar empresa
+        </button>
+
+        <p id="msg" class="mensaje"></p>
+      </form>
+
+      <footer>© 2025 INVYMENT | Todos los derechos reservados.</footer>
+    </section>
+
+  </main>
+
+  <!-- Botón ayuda -->
+  <button class="help-button" onclick="abrirAyuda()">?</button>
+
+  <!-- Modal -->
+  <div class="help-modal" id="modalAyuda" hidden>
+    <div class="help-content">
+      <h3>¿Necesitas ayuda?</h3>
+      <ul>
+        <li>🏢 Nombre completo de la empresa.</li>
+        <li>🧾 RFC.</li>
+        <li>👤 Representante legal.</li>
+        <li>🖼️ Suba un logo en PNG o JPG.</li>
+      </ul>
+
+      <button class="cerrar-ayuda" onclick="cerrarAyuda()">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="Estilos/registro.js"></script>
+
+</body>
+</html>

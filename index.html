@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Estilos/Style.css">
+    <script src="static/app.js" defer></script>
+    <title>INVYMENT</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+    <img src="Imagenes/logo invecore.png" alt="Logo INVEXCORE">
+    <span>INVYMENT</span>
+</div>
+        <ul class="nav-list">
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#acerca">ACERCA DE NOSOTROS</a></li>
+            <li><a href="#servicios">SERVICIOS</a></li>
+            <li><a href="#contacto">CONTACTO</a></li>
+            <li><a href="planes.html" id="inicia">PLANES</a></li>
+        </ul>
+        <button class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <header id="inicio" class="hero-section">
+ <div class="hero-content">
+  <div class="hero-text">
+    <h1>¡Bienvenido a INVYMENT!</h1>
+    <p>Optimiza tu inventario, maximiza tu éxito.</p>
+  </div>
+  <div class="hero-image">
+    <img src="Imagenes/4ta opcion.png" alt="Engranes INVEXCORE">
+  </div>
+</div>
+
+</header>
+
+
+    <section class="about-section" id="acerca">
+        <h2 class="about-title">Acerca de nosotros</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.2rem;">
+            INVYMENT es una plataforma innovadora dedicada a transformar la gestión de inventarios en empresas medianas. Nuestro propósito es ofrecer soluciones tecnológicas avanzadas para facilitar procesos, mejorar decisiones estratégicas y maximizar la eficiencia operativa.
+        </p>
+        <div class="mvv-container">
+            <div class="mision">
+                <h3>Misión</h3>
+                
+                <p>Proporcionar soluciones tecnológicas avanzadas para la gestión eficiente de inventarios, ayudando a la empresa Helados Jivu a optimizar sus recursos y maximizar su rentabilidad.</p>
+            </div>
+            <div class="vision">
+                <h3>Visión</h3>
+                
+                <p>Ser el software líder en gestión de inventarios para negocios medianos, reconocido por su innovación, eficiencia y capacidad de adaptación a las necesidades del mercado.</p>
+            </div>
+            <div class="valores">
+                <h3>Valores</h3>
+                
+                <ul>
+                    <li>Innovación</li>
+                    <li>Eficiencia</li>
+                    <li>Compromiso</li>
+                    <li>Transparencia</li>
+                    <li>Orientación al cliente</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <main>
+       <section id="servicios" class="cards-container">
+  <h2>Nuestros servicios</h2>
+  <p style="text-align: center; max-width: 800px; margin: 0 auto 2rem; font-size: 1.2rem;">
+    Nuestros servicios están diseñados para ofrecerte control total sobre tu inventario, mejorar la eficiencia operativa y ayudarte a tomar decisiones estratégicas. Desde el análisis de ventas hasta la generación automática de informes, INVYMENT transforma tus datos en acciones concretas para el éxito de tu negocio.
+  </p>
+
+  <div class="cards">
+    <!-- Tarjeta 1 -->
+    <div class="card dark-card">
+      <img src="Imagenes/serv1.jpeg" 
+           alt="Control de Ventas y Stock Crítico" 
+           style="width: 80%; max-width: 300px; display: block; margin: 0 auto 1rem;">
+      <h3>"Control de Ventas y Stock Crítico"</h3>
+      <p>Identifica los productos más vendidos y predice cuándo será necesario reabastecer, optimizando la gestión de compras y reduciendo pérdidas por sobrestock o desabasto.</p>
+      <div class="card-decor">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Tarjeta 2 -->
+    <div class="card dark-card">
+      <img src="Imagenes/serv2.jpeg" 
+           alt="Control Total de Productos Clave" 
+           style="width: 80%; max-width: 300px; display: block; margin: 0 auto 1rem;">
+      <h3>"Control Total de Productos Clave"</h3>
+      <p>Permite registrar, actualizar y monitorear el stock de productos, asegurando que la empresa siempre tenga disponibles los artículos necesarios.</p>
+      <div class="card-decor">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- Tarjeta 3 -->
+    <div class="card dark-card">
+      <img src="Imagenes/serv3.jpeg" 
+           alt="Informes Inteligentes para Decisiones Rentables" 
+           style="width: 80%; max-width: 300px; display: block; margin: 0 auto 1rem;">
+      <h3>"Informes Inteligentes para Decisiones Rentables"</h3>
+      <p>Proporciona informes detallados sobre ventas, stock y proveedores, facilitando la toma de decisiones estratégicas para mejorar la rentabilidad del negocio.</p>
+      <div class="card-decor">
+        <span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <section id="contacto" class="contact-section">
+            <h2>Contacto</h2>
+            <p>¡Si te interesa conocer más información sobre INVYMENT, contáctanos!</p>
+            <form id="contact-form">
+                <input type="text" name="nombre" placeholder="Nombre" required>
+                <input type="email" name="correo" placeholder="Correo Electrónico" required>
+                <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        
+        <!-- CTA para registrar empresa (ahora debajo del formulario) -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2>¿Listo para optimizar tu inventario?</h2>
+                <p>Registra tu empresa y comienza a gestionar tu inventario de forma inteligente con INVYMENT.</p>
+                <a href="bienvenida.html" class="cta-button">Registrar Empresa</a>
+            </div>
+        </section>
+
+        <div id="flash-messages" class="flash-messages"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="social-links">
+            <a href="https://www.instagram.com/invexcore_?igsh=MWNnN216dWhieGprdg==" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com/share/1VeZ6JV585/?mibextid=wwXIfr" target="_blank">Facebook</a> |
+            <a href="https://x.com/invexcore?s=11" target="_blank">X</a>
+        </div>
+        <p>&copy; 2025 INVYMENT. Todos los derechos reservados.</p>
+    </footer>
+    <script src="app.js" defer></script>
+
+</body>
+<script src="Estilos/contacto.js"></script>
+
+</html>

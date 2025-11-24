@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Activar Empresa - INVEXCORE</title>
+  <link rel="stylesheet" href="Estilos/activar.css">
+</head>
+
+<body>
+  <!-- FONDO ANIMADO -->
+  <canvas id="bgWaves"></canvas>
+
+  <div class="contenedor">
+
+    <!-- CARD INICIAL -->
+    <div class="card-activacion" id="formularioActivacion">
+      <h2>Activación de Empresa</h2>
+      <p>Introduce el código que recibiste por correo para completar el registro.</p>
+
+      <div class="input-con-icono">
+        <span class="icono"></span>
+        <input type="text" id="codigoActivacion" placeholder="123456" />
+      </div>
+
+      <button onclick="validarCodigo()">Activar Empresa</button>
+
+      <p class="mensaje" style="margin-top:8px">
+        ¿No te llegó el código? <a href="#" id="reenviarCodigo">Reenviar</a>
+      </p>
+
+      <p id="resultado" class="mensaje"></p>
+    </div>
+
+    <!-- ANIMACIÓN CARGA -->
+    <div class="animacion-exito" id="animacionExito">
+      <div class="loader"></div>
+    </div>
+
+    <!-- MENSAJE FINAL -->
+    <div class="mensaje-final" id="mensajeFinal">
+      <div class="check">✔</div>
+      <h2>Tu empresa se ha registrado correctamente</h2>
+      <button onclick="mostrarBienvenida()">Continuar</button>
+
+    </div>
+
+  
+  </div> <!-- CIERRE DEL DIV CONTENEDOR -->
+
+  <!-- SCRIPT FINAL (fuera del contenedor, correctamente colocado) -->
+  <script src="Estilos/activar.js"></script>
+
+</body>
+</html>

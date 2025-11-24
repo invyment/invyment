@@ -1,0 +1,104 @@
+/* ================================
+   BIENVENIDA – INVYMENT
+================================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #020617; /* muy oscuro */
+  color: #e5e7eb;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Canvas de fondo */
+#bgWaves {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Contenedor principal */
+.wrap-bienvenida {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+/* Tarjeta al centro (estilo similar a tu ejemplo) */
+.card-bienvenida {
+  width: min(520px, 100%);
+  background: radial-gradient(circle at top, #0f172a 0, #020617 60%);
+  border-radius: 24px;
+  padding: 2.8rem 2.4rem;
+  box-shadow:
+    0 28px 80px rgba(0, 0, 0, 0.85),
+    0 0 0 1px rgba(148, 163, 184, 0.05);
+  text-align: center;
+  position: relative;
+}
+
+/* Borde/halo suave */
+.card-bienvenida::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at top, rgba(56, 189, 248, 0.35), transparent 60%);
+  opacity: 0.7;
+  z-index: -1;
+}
+
+/* Título */
+.card-bienvenida h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f9fafb;
+  margin-bottom: 0.6rem;
+}
+
+/* Eslogan */
+.card-bienvenida .subtitulo {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #60a5fa;
+  margin-bottom: 1.8rem;
+}
+
+/* Mensaje principal */
+.card-bienvenida .mensaje {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #cbd5f5;
+  margin-bottom: 1.8rem;
+}
+
+/* Frase final */
+.card-bienvenida .gracias {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #22c55e;
+}
+
+/* Animación de entrada suave */
+.card-bienvenida {
+  opacity: 0;
+  transform: translateY(12px);
+  animation: fadeUp 0.9s ease-out forwards;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

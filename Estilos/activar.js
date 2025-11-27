@@ -9,8 +9,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const card = document.getElementById("formularioActivacion");
   const animacion = document.getElementById("animacionExito");
   const finalMsg = document.getElementById("mensajeFinal");
-  const bienvenida = document.getElementById("pantallaBienvenida");
-  const modalAyuda = document.getElementById("modalAyuda");
 
   /* ================================
           VALIDAR CÓDIGO REAL
@@ -28,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resultado.style.color = "#00B7FF";
 
     try {
-      const response = await fetch("http://192.168.1.27:3000/api/empresas/activar", {
+      const response = await fetch("http://localhost:3000/api/empresas/activar", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ codigo })
@@ -43,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // -------------------------------
-      // ANIMACIONES ORIGINALES
+      // ANIMACIÓN DE CARGA → MENSAJE FINAL
       // -------------------------------
       card.style.display = "none";
       animacion.style.display = "flex";
@@ -61,40 +59,16 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   /* ================================
-     CONTINUAR → PANTALLA BIENVENIDA
+     CONTINUAR → BIENVENIDA2.HTML
   =================================*/
   window.mostrarBienvenida = () => {
-    finalMsg.style.display = "none";
-    bienvenida.style.display = "flex";
-  };
+  window.location.href = "bienvenida2.html";
+};
 
-  /* ================================
-        BIENVENIDA → DASHBOARD
-  =================================*/
-  window.mostrarDashboard = () => {
-    // Redirección REAL a la página final de bienvenida
-    window.location.href = "bienvenida.html";
-  };
-
-  /* ================================
-              MODAL AYUDA
-  =================================*/
-  window.abrirAyuda = () => {
-    if (!modalAyuda) {
-      console.error("⚠ ERROR: No existe #modalAyuda en el HTML");
-      return;
-    }
-    modalAyuda.style.display = "flex";
-  };
-
-  window.cerrarAyuda = () => {
-    if (modalAyuda) modalAyuda.style.display = "none";
-  };
 
   /* =======================================================
-      FONDO ANIMADO – MISMAS LÍNEAS/ONDAS QUE REGISTRO
+      FONDO ANIMADO – LÍNEAS/ONDAS
   ========================================================*/
-
   const canvas = document.getElementById("bgWaves");
 
   if (canvas) {
@@ -143,4 +117,3 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
-

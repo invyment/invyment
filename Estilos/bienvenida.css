@@ -1,15 +1,12 @@
-/* ===========================
-   ESTILO GENERAL
-=========================== */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Poppins', sans-serif;
   background: #050b16;
+  font-family: 'Poppins', sans-serif;
   overflow: hidden;
 }
 
-/* CANVAS DE RAYAS */
+/* Fondo animado */
 #rayas {
   position: fixed;
   top: 0;
@@ -19,65 +16,55 @@ body {
   z-index: 1;
 }
 
-/* TEXTO */
-#textoPrincipal {
+/* Contenedor */
+.contenedor {
   position: absolute;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+/* Título */
+#titulo {
   font-size: 50px;
   color: #ffffff;
-  letter-spacing: 3px;
   font-weight: 600;
   text-shadow: 0 0 15px #00e4ff;
-  z-index: 2;
+  margin-bottom: 10px;
+}
+
+/* Texto animado */
+#textoAnimado {
+  opacity: 1;
+}
+
+/* Subtexto */
+#textoSecundario {
   opacity: 0;
-  animation: flotar 3s ease-in-out infinite;
+  font-size: 22px;
+  color: #d8eaff;
+  transition: opacity 1s ease;
+  margin-top: 20px;
 }
 
-/* Animación flotante suave */
-@keyframes flotar {
-  0% { transform: translate(-50%, -50%); }
-  50% { transform: translate(-50%, -53%); }
-  100% { transform: translate(-50%, -50%); }
-}
-
-/* BOTÓN */
+/* Botón */
 #btnContinuar {
-  position: absolute;
-  bottom: 15%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: 40px;
   padding: 16px 60px;
   font-size: 20px;
-  color: #00131f;
-  background: #00e4ff;
   border: none;
   border-radius: 14px;
+  background: #00e4ff;
   font-weight: 600;
-  cursor: pointer;
+  color: #00131f;
   opacity: 0;
-  transition: .4s;
-  z-index: 3;
+  cursor: pointer;
+  transition: .3s ease;
 }
 
 #btnContinuar:hover {
-  background: #09c7d6;
-  transform: translateX(-50%) scale(1.08);
-}
-
-
-
-/* TEXTO SECUNDARIO */
-#textoSecundario {
-  position: absolute;
-  top: 52%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #d8eaff;
-  font-size: 22px;
-  opacity: 0;
-  z-index: 2;
-  transition: opacity 1.2s ease;
-  letter-spacing: 1px;
+  transform: scale(1.08);
+  background: #0cc8d7;
 }
